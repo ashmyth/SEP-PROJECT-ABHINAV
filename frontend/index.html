@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WOD Log — High Performance Workout Tracker</title>
+    <meta
+      name="description"
+      content="High-performance workout logging, progressive overload tracking, 1RM calculator, rest timer, and fitness analytics."
+    />
+    <meta name="theme-color" content="#080c14" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700&family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendored locally — no runtime CDN dependency -->
+    <link rel="stylesheet" href="/static/dist/output.css" />
+    <script src="/static/vendor/react.js"></script>
+    <script src="/static/vendor/react-dom.js"></script>
+    <script src="/static/vendor/framer-motion.js"></script>
+    <script src="/static/vendor/confetti.js"></script>
+  </head>
+  <body class="bg-slate-950 text-slate-100 antialiased selection:bg-emerald-500/30 selection:text-emerald-300 min-h-screen">
+    <div id="root">
+      <div style="min-height:100vh;display:flex;align-items:center;justify-content:center;color:#64748b;font-family:Inter,system-ui,sans-serif">
+        Loading…
+      </div>
+    </div>
+
+    <!-- Surface any load/runtime error instead of a blank white screen -->
+    <script>
+      window.addEventListener('error', function (e) {
+        var root = document.getElementById('root');
+        if (root && !root.dataset.mounted) {
+          var msg = (e && (e.message || (e.error && e.error.message))) || 'Unknown error';
+          root.innerHTML =
+            '<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;color:#fca5a5;font-family:Inter,system-ui,sans-serif;text-align:center">' +
+            '<div style="max-width:560px"><div style="font-weight:700;font-size:18px;margin-bottom:8px">Failed to start the app</div>' +
+            '<div style="font-size:13px;opacity:.85;word-break:break-word">' + msg + '</div></div></div>';
+        }
+      });
+    </script>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

@@ -2,13 +2,30 @@
 node_modules/
 .venv/
 __pycache__/
-.env
+*.pyc
 
-# Build output
+# Environment & Secrets
+.env
+.env.*
+*.env
+
+# SQLite Databases & Local Data
+*.sqlite3
+db.sqlite3
+*.db
+
+# Logs
+*.log
+logs/
+
+# Build output (but keep the compiled Tailwind CSS the app needs)
 dist/
+!frontend/dist/
+!frontend/dist/**
 build/
 
-# Editor
+# Editor & OS
 .vscode/
 .idea/
 .DS_Store
+Thumbs.db

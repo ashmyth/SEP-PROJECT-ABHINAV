@@ -1,0 +1,14 @@
+{
+  "name": "wod-log",
+  "version": "1.0.0",
+  "description": "WOD Log - High Performance Workout Tracker",
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "start": "python backend/manage.py runserver 8000",
+    "test": "python backend/manage.py test workout"
+  },
+  "keywords": ["workout", "fitness", "logger", "django", "react"],
+  "author": "",
+  "license": "MIT"
+}

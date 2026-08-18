@@ -44,6 +44,10 @@ export function formatShortDate(iso) {
   return { day, mon };
 }
 
+export function emptyExercise() {
+  return { name: "", sets: 0, reps: 0, weight: 0 };
+}
+
 export function greetingForHour(hour) {
   if (hour < 12) return "Good morning";
   if (hour < 18) return "Good afternoon";
